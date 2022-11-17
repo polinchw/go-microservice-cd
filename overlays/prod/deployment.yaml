@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: go-microservice
+  name: go-microservice
+spec:
+  replicas: 2
+    spec:
+      containers:
+      - name: go-microservice
+        resources: 
+          limits:
+            cpu: 100m
+            memory: 150Mi
+          requests:
+            cpu: 20m
+            memory: 50Mi

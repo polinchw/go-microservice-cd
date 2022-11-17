@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: go-microservice
+  name: go-microservice
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8008
+  selector:
+    app: go-microservice
